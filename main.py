@@ -58,7 +58,6 @@ async def timer(message: Message):
         hour = datetime.now(desired_timezone).hour
         minute = datetime.now(desired_timezone).minute
         day_in_month = days_in_month(year, month)
-        print(year, month, day, hour, minute)
         if get_abbys_status(message.from_user.id):
             if (day == 1 or day == 16) and hour == 23 and minute < 5:
                 await message.answer(text='Бездна обновилась!')
